@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
 Route::get('/greeting', function () {
     return "<h1> hello, Bùi Thị Quỳnh Nga ";
 });
+
