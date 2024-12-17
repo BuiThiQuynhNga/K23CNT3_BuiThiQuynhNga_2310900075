@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\BtqnSessionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,4 +22,4 @@ Route::get('/btqnsession/del',[BtqnSessionController::class,'btqnDeleteSessionDa
 //ACCOUNT
 Route::get('/btqn-login',[BtqnAccountController::class,'btqnLogin'])->name('btqnaccount.btqnlogin');
 Route::post('/btqn-login',[BtqnAccountController::class,'btqnLogin'])->name('btqnaccount.btqnloginsubmit');
-Route::get('/btqn-logout',[BtqnAccountController::class,'btqnLogout'])->name('btqnaccount.btqnlogout');
+Route::get('/btqn-logout',[BtqnAccountController::class,'btqnLog'])->name('btqnaccount.btqnlogout');
