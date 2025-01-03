@@ -15,8 +15,8 @@ class BTQN_SAN_PHAMTableSeeder extends Seeder
     public function run(): void
     {
         DB::table('BTQN_SAN_PHAM')->insert([
-            'btqnMaSanPham'   =>"VP001",
-            'btqnTenSanPham'  =>"Cây phú quý",
+            'btqnMaSanPham'   =>"QN001",
+            'btqnTenSanPham'  =>"Cây tài lộc",
             'btqnHinhAnh'     =>"images/san-pham/VP001.jpg",
             'btqnSoLuong'     => 100,
             'btqnDonGia'      => 699000,
@@ -24,8 +24,8 @@ class BTQN_SAN_PHAMTableSeeder extends Seeder
             'btqnTrangThai'   =>0,
         ]);
         DB::table('BTQN_SAN_PHAM')->insert([
-            'btqnMaSanPham'   =>"VP002",
-            'btqnTenSanPham'  =>"Cây đại phú gia",
+            'btqnMaSanPham'   =>"QN002",
+            'btqnTenSanPham'  =>"Cây tiền tài",
             'btqnHinhAnh'     =>"images/san-pham/VP002.jpg",
             'btqnSoLuong'     => 200,
             'btqnDonGia'      => 550000,
@@ -33,8 +33,8 @@ class BTQN_SAN_PHAMTableSeeder extends Seeder
             'btqnTrangThai'   =>0,
         ]);
         DB::table('BTQN_SAN_PHAM')->insert([
-            'btqnMaSanPham'   =>"VP003",
-            'btqnTenSanPham'  =>"Cây hạnh phúc",
+            'btqnMaSanPham'   =>"QN003",
+            'btqnTenSanPham'  =>"Cây phú quý",
             'btqnHinhAnh'     =>"images/san-pham/VP003.jpg",
             'btqnSoLuong'     => 150,
             'btqnDonGia'      => 250000,
@@ -42,8 +42,8 @@ class BTQN_SAN_PHAMTableSeeder extends Seeder
             'btqnTrangThai'   =>0,
         ]);
         DB::table('BTQN_SAN_PHAM')->insert([
-            'btqnMaSanPham'   =>"VP004",
-            'btqnTenSanPham'  =>"Cây vạn lộc",
+            'btqnMaSanPham'   =>"QN004",
+            'btqnTenSanPham'  =>"Cây vạn phúc",
             'btqnHinhAnh'     =>"images/san-pham/VP004.jpg",
             'btqnSoLuong'     => 300,
             'btqnDonGia'      => 799000,
@@ -51,8 +51,8 @@ class BTQN_SAN_PHAMTableSeeder extends Seeder
             'btqnTrangThai'   =>0,
         ]);
         DB::table('BTQN_SAN_PHAM')->insert([
-            'btqnMaSanPham'   =>"PT001",
-            'btqnTenSanPham'  =>"Cây thiết mộc lan",
+            'btqnMaSanPham'   =>"BL001",
+            'btqnTenSanPham'  =>"Cây mộc lan",
             'btqnHinhAnh'     =>"images/san-pham/PT001.jpg",
             'btqnSoLuong'     => 150,
             'btqnDonGia'      => 590000,
@@ -60,8 +60,8 @@ class BTQN_SAN_PHAMTableSeeder extends Seeder
             'btqnTrangThai'   =>0,
         ]);
         DB::table('BTQN_SAN_PHAM')->insert([
-            'btqnMaSanPham'   =>"PT002",
-            'btqnTenSanPham'  =>"Cây trường sinh",
+            'btqnMaSanPham'   =>"BL002",
+            'btqnTenSanPham'  =>"Cây kim tiền",
             'btqnHinhAnh'     =>"images/san-pham/PT002.jpg",
             'btqnSoLuong'     => 100,
             'btqnDonGia'      => 150000,
@@ -69,8 +69,8 @@ class BTQN_SAN_PHAMTableSeeder extends Seeder
             'btqnTrangThai'   =>0,
         ]);
         DB::table('BTQN_SAN_PHAM')->insert([
-            'btqnMaSanPham'   =>"PT003",
-            'btqnTenSanPham'  =>"Cây hạnh phúc",
+            'btqnMaSanPham'   =>"BL003",
+            'btqnTenSanPham'  =>"Cây lộc phát",
             'btqnHinhAnh'     =>"images/san-pham/PT003.jpg",
             'btqnSoLuong'     => 200,
             'btqnDonGia'      => 299000,
@@ -78,8 +78,8 @@ class BTQN_SAN_PHAMTableSeeder extends Seeder
             'btqnTrangThai'   =>0,
         ]);
         DB::table('BTQN_SAN_PHAM')->insert([
-            'btqnMaSanPham'   =>"PT004",
-            'btqnTenSanPham'  =>"Cây hoa nhài(Lài ta)",
+            'btqnMaSanPham'   =>"BL004",
+            'btqnTenSanPham'  =>"Cây hoa nhài",
             'btqnHinhAnh'     =>"images/san-pham/PT004.jpg",
             'btqnSoLuong'     => 300,
             'btqnDonGia'      => 199000,

@@ -14,23 +14,23 @@ class BTQN_LOAI_SAN_PHAMTableSeeder extends Seeder
     public function run(): void
     {
         DB::table('BTQN_LOAI_SAN_PHAM')->insert([
-            'btqnMaLoai'    => "L001",
-            'btqnTenLoai'   =>"Cây cảnh văn phòng",
+            'btqnMaLoai'    => "BT01",
+            'btqnTenLoai'   =>"Hoa thiên lí",
             'btqnTrangThai' =>0
         ]);
         DB::table('BTQN_LOAI_SAN_PHAM')->insert([
-            'btqnMaLoai'    => "L002",
-            'btqnTenLoai'   =>"Cây để bàn",
+            'btqnMaLoai'    => "BT02",
+            'btqnTenLoai'   =>"Hoa phù dung",
             'btqnTrangThai' =>0
         ]);
         DB::table('BTQN_LOAI_SAN_PHAM')->insert([
-            'btqnMaLoai'    => "L003",
-            'btqnTenLoai'   =>"Cây phong thủy",
+            'btqnMaLoai'    => "BT03",
+            'btqnTenLoai'   =>"Hoa thủy tiên",
             'btqnTrangThai' =>0
         ]);
         DB::table('BTQN_LOAI_SAN_PHAM')->insert([
-            'btqnMaLoai'    => "L004",
-            'btqnTenLoai'   =>"Cây thủy canh",
+            'btqnMaLoai'    => "BT04",
+            'btqnTenLoai'   =>"Hoa kim tiền",
             'btqnTrangThai' =>0
         ]);
     }

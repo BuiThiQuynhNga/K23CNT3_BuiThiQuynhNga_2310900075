@@ -1,24 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login System</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-</head>
-<body>
-    <section class="container my-1 border p-2">
-        <table class="table table-bordered">
-        <tr>
-            <img src="/images/logo_login.png" alt="logo" width="150" height="auto" >
-            <h3>Đăng Nhập Hệ Thống</h3>
-            <th>Email/Số Điện Thoại </th><br>
-        </tr>
-        <tr>
-            <th>PassWord</th>
-        </tr>
-        </table>
-    </section>
-</body>
-</html>
+@extends('BtqnLogin')
+@section('Title','Login')
+@section('content-body')
+    <div class="middle-box text-center loginscreen animated fadeInDown">
+        <div>
+            <div>
+                <h1 class="logo-name"></h1>
+            </div>
+            <h3 class="font-bold">Welcome</h3>
+            <p>
+                <small>STUDIO</small>
+            </p>
+            <div class="ibox-content"> 
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+            </div>
+            <form class="m-t" role="form" action="">
+                <div class="form-group">
+                    <input type="btqnEmail" name="btqnEmail" class="form-control" placeholder="Username" required="">
+                </div>
+                <div class="form-group">
+                    <input type="btqnPassword" name="btqnPassword" class="form-control" placeholder="Password" required="">
+                </div>
+                <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
+                <a href="#">
+                    <small>Quên mật khẩu</small>
+                </a>
+                <p class="text-muted text-center">
+                    <small> Chưa có tài khoản</small>
+                </p>
+                <a class="btn btn-sm btn-white btn-block" href="{{route('admins.btqnLogin')}}">Tạo tài khoăn mới.</a>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+@endsection
