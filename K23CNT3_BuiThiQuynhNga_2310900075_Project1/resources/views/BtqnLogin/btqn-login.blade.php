@@ -1,45 +1,88 @@
-@extends('BtqnLogin')
-@section('Title','Login')
-@section('content-body')
-    <div class="middle-box text-center loginscreen animated fadeInDown">
-        <div>
-            <div>
-                <h1 class="logo-name"></h1>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập - Quản Trị</title>
+    <!-- Link tới Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link tới Font Awesome (cho icon) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #f0f8ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        .login-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-control {
+            border-radius: 50px;
+        }
+        .btn-primary {
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 50px;
+            padding: 10px 20px;
+            width: 100%;
+        }
+        .btn-primary:hover {
+            background-color: #45a049;
+        }
+        .footer-text {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Đăng Nhập</h2>
+
+        <!-- Thông báo lỗi -->
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                @foreach ($errors->all() as $error)
+                    <p>{{ $error }}</p>
+                @endforeach
             </div>
-            <h3 class="font-bold">Welcome</h3>
-            <p>
-                <small>STUDIO</small>
-            </p>
-            <div class="ibox-content"> 
-                @if ($errors->any())
-                    <div class="alert alert-danger">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                @endif
+        @endif
+
+        <!-- Form đăng nhập -->
+        <form action="{{ route('admins.btqnLoginSubmit') }}" method="POST">
+            @csrf
+            <div class="mb-3">
+                <label for="btqnTaiKhoan" class="form-label">Tài Khoản</label>
+                <input type="text" class="form-control" id="btqnTaiKhoan" name="btqnTaiKhoan" placeholder="Nhập tài khoản" required>
             </div>
-            <form class="m-t" role="form" action="">
-                <div class="form-group">
-                    <input type="btqnEmail" name="btqnEmail" class="form-control" placeholder="Username" required="">
-                </div>
-                <div class="form-group">
-                    <input type="btqnPassword" name="btqnPassword" class="form-control" placeholder="Password" required="">
-                </div>
-                <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
-                <a href="#">
-                    <small>Quên mật khẩu</small>
-                </a>
-                <p class="text-muted text-center">
-                    <small> Chưa có tài khoản</small>
-                </p>
-                <a class="btn btn-sm btn-white btn-block" href="{{route('admins.btqnLogin')}}">Tạo tài khoăn mới.</a>
-            </form>
+            <div class="mb-3">
+                <label for="btqnMatKhau" class="form-label">Mật Khẩu</label>
+                <input type="password" class="form-control" id="btqnMatKhau" name="btqnMatKhau" placeholder="Nhập mật khẩu" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Đăng Nhập</button>
+        </form>
+
+        <div class="footer-text">
+            <p>© 2025 Quản Trị Hệ Thống</p>
         </div>
     </div>
 
-    <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-@endsection
+    <!-- Script Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

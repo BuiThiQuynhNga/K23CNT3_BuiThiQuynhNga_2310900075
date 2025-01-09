@@ -48,6 +48,7 @@ class BTQN_SAN_PHAMController extends Controller
          $btqnSanPham = BTQN_SAN_PHAM::find($request->id);
          $btqnSanPham->btqnMaSanPham= $request->btqnMaSanPham;
          $btqnSanPham->btqnTenSanPham= $request->btqnTenSanPham;
+         $btqnSanPham->btqnHinhAnh= $request->btqnHinhAnh;
          $btqnSanPham->btqnSoLuong= $request->btqnSoLuong;
          $btqnSanPham->btqnDonGia= $request->btqnDonGia;
          $btqnSanPham->btqnTrangThai= $request->btqnTrangThai;

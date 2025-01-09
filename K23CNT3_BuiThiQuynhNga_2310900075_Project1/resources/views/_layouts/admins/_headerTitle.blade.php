@@ -1,16 +1,107 @@
-<section >
-    <header class="d-flex align-items-center justify-content-between p-3 bg-light border-bottom">
-        <div class="logo d-flex align-items-center">
-            <img src="{{asset('/images/logo_login.png')}}" alt="Logo" class="me-2" style="width: 100px; height: auto;">
-            <h2 class="m-0">Tiệm Hoa Pơ</h2>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Quản Trị</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Header styling */
+        header {
+            background: linear-gradient(90deg, #4a6b8c, #414141); /* Gradient màu xanh dịu và màu đỏ */
+            color: white;
+            padding: 10px 0;
+            box-shadow: 0 4px 6px rgba(179, 177, 177, 0.082); /* Shadow for modern look */
+        }
+
+        /* Logo styling */
+        .logo img {
+            max-height: 50px;
+            border-radius: 5px;
+        }
+
+        /* Navigation links */
+        .nav-link {
+            color: white;
+            font-weight: 500;
+            margin: 0 10px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .nav-link:hover {
+            color: #ffcd39; /* Highlight màu vàng nhạt */
+        }
+
+        /* Search form */
+        .search-form .form-control {
+            border-radius: 20px 0 0 20px;
+        }
+
+        .search-form .btn {
+            border-radius: 0 20px 20px 0;
+            background-color: #ffcd39; /* Màu vàng nhạt */
+            color: #343a40;
+            border: none;
+        }
+
+        .search-form .btn:hover {
+            background-color: #ffc107; /* Màu vàng đậm khi hover */
+        }
+
+        /* Account section */
+        .account-info {
+            font-size: 14px;
+        }
+
+        .account-info a {
+            color: white;
+            text-decoration: none;
+            margin-left: 10px;
+            font-weight: 500;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .account-info a:hover {
+            color: #6b6657; /* Highlight màu vàng nhạt khi hover */
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="container d-flex justify-content-between align-items-center">
+        <!-- Logo -->
+        <div class="logo">
+            <a href="/btqn-admins">
+                <img src="{{ asset('images/logo_login.png') }}" alt="Logo">
+            </a>
         </div>
-        <nav class="navbar bg-body-tertiary">
-            <div class="container-fluid">
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn" type="submit">Search</button>
-                </form>
-            </div>
+
+        <!-- Navigation -->
+        <nav class="d-flex align-items-center">
+            <a href="/btqn-admins" class="nav-link">Trang chủ</a>
+            <a href="/btqn-admins/btqndanhsachquantri/btqnsanpham" class="nav-link">Sản phẩm</a>
+            <a href="/btqn-admins/btqn-khach-hang" class="nav-link">Liên hệ</a>
         </nav>
-    </header>
-</section>
+
+        <!-- Search Form -->
+        <form action="{{ route('btqnuser.searchAdmins') }}" method="GET" class="search-form d-flex">
+            <input type="text" class="form-control" placeholder="Tìm kiếm..." name="search">
+            <button type="submit" class="btn">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+
+        <!-- Account Info -->
+        <div class="account-info d-flex align-items-center">
+            <span>Xin chào</span>
+            <a href="{{ route('admins.btqnLogin') }}">Đăng xuất</a>
+        </div>
+    </div>
+</header>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
